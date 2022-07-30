@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<title>Balance</title>
+</head>
+<body>
+	<div id="nav"></div>
+	<div id="top_level">
+		<div id="welcome">
+			<h1><img src="assets/gallery/cyber-1.png"></h1>
+			<ul>
+				<li>As you are online, so are the bad guys.</li>
+				<li>Gain visibility into your organization’s cyber risk.</li>
+				<li>Security is not just computer science – it’s a mindset.</li>
+				<li>The only firewall that protects against cyber criminals is your brain.</li>
+				<li>How do you protect our country from cyber-attacks? Start by protecting your own network.</li>
+			</ul>
+		</div>
+		<div id="container">
+			<div id="cuber">
+				<div class="faces" id="left">Java</div>
+				<div class="faces" id="right">C++</div>
+				<div class="faces" id="front">Python</div>
+				<div class="faces" id="back">C</div>
+				<div class="faces" id="top">Bash</div>
+				<div class="faces" id="bottom">Assembly</div>
+			</div>
+		</div>
+		<span id="line"></span>
+	</div>
+</body>
+<script type="text/javascript">
+	let faces = document.querySelectorAll(".faces");
+
+	let line = document.querySelector("#line");
+	let w = 0;
+	let interval1 = setInterval(() => {
+		line.style.marginLeft = `${w*100}%`;
+			w+=0.01;
+		if(w>1){
+			w=0;
+		}
+	},10);
+	
+	function rand(){
+		return 0*Math.ceil(1000*Math.random())%255;
+	}
+</script>
+</html>
